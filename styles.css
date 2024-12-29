@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none
+}
+
+.background{
+    min-width: 100vw;
+    min-height: 100vh;   
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem;
+
+}
+
+.card{ 
+    max-width: 20.5rem;
+    min-width: 16rem;/* Make the container take up 90% of the screen width */
+    max-height: 39.6rem; /* Limit the maximum width for larger screens */ /* Center the container horizontally */
+    background: white; /* Optional: Background color */
+    border-radius: 0.7rem; /* Optional: Rounded corners */; /* Optional: Internal spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-evenly;
+    position: relative;
+    z-index: -2 ;
+    height: auto;
+    margin: auto;
+    
+  }
+
+.perfume-image{
+    width: 100%;
+    align-self: center;
+    object-fit: cover;
+    z-index:-2;
+    overflow: hidden;
+    border-radius: 0.7rem 0.7rem 0 0;
+}
+
+.img-container{
+    width: 100%;
+    max-height: 15rem;
+    margin:0;
+    overflow: hidden;
+    z-index: -1
+}
+
+.rest-of-card{
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 59%;
+    z-index: 3;
+    position: relative;
+    margin-top: -1vh;
+}
+
+.rest-of-card *{
+    margin: 0.32rem 0;
+}
+
+header, main{
+    display: contents
+}
+
+.product-type{
+    font-family: Montserrat;
+    font-size: 0.8rem;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 0.25rem;
+    font-weight: 500;
+}
+
+.product-name{
+    font-family: Fraunces;
+    font-size: 1.8rem;
+    color: hsl(212, 21%, 14%);
+    font-weight: 700;
+    line-height:1;
+}
+
+.product-description{
+    font-family: Montserrat;
+    color: hsl(228, 12%, 48%);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-top: rem
+}
+
+.current-price{
+    font-family: Fraunces;
+    font-size: 2rem;
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.old-price{
+    font-family: Montserrat;
+    text-decoration: line-through;
+    font-size: 0.8rem;
+    color: hsl(228, 12%, 48%);
+    text-align: center;
+    flex-wrap: wrap
+}
+
+.price-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+button{
+    width: 100%;
+    min-height: 2.8rem;
+    background-color: hsl(158, 36%, 37%);
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.button-text{
+    color: hsl(0, 0%, 100%) !important;
+    font-weight: 700;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+.cart-icon{
+    margin-right: 0.5rem;   
+}
+
+@media screen and (min-width: 48rem){
+
+
+    .background{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.7rem;
+    }
+    .card{
+        flex-direction: row;
+        max-height: 25.5rem;
+        max-width: 38rem
+    }
+
+    .img-container{
+        width: 50%;
+        min-height: 20rem;
+        max-height: 25.5rem;
+        border-radius: 0.7rem 0 0 0.7rem;
+    }
+
+    .rest-of-card{
+        padding: 2rem;
+        max-height: 26rem;
+        width: 50%;
+        display: flex; 
+        flex-direction: column ;
+        justify-content: space-between  ;
+        align-items: space-between;
+        margin-top: 0rem
+    }
+
+    .product-type{
+        margin-top: 0;
+    }
+
+    .product-name{
+        font-size: 2rem;
+    }
+
+    .product-description{
+        font-size: 0.8rem;
+    }
+
+    .current-price{
+        font-size: 2.5rem;
+    }
+
+    .old-price{
+        font-size: 1rem;
+    }
+
+    .price-container{
+        margin-bottom: 0.5rem;
+    }
+
+    button{
+        height: 3rem;
+    }
+    .mobile-img {
+        display: none;
+      }
+
+        .desktop-img {
+            width: 100%;
+            height: 100%;
+        object-fit: cover;
+        }
+    
+}
+
+@media (max-width: 47.99rem) {
+    .desktop-img {
+      display: none;
+    }
+  }
